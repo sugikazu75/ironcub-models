@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>iRonCub-Mk3</name>
+  <version>0.0.2</version>
+  <description>iRonCub-Mk3 URDF model and meshes (for ROS package:// resolution)</description>
+  <maintainer email="sugihara@jsk.imi.i.u-tokyo.ac.jp">sugikazu75</maintainer>
+  <license>BSD-3-Clause</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher_gui</exec_depend>
+  <exec_depend>rviz</exec_depend>
+</package>
