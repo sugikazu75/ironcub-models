@@ -1,5 +1,8 @@
 <launch>
-  <arg name="model" default="$(find iRonCub-Mk3)/iRonCub/robots/iRonCub-Mk3/model_stl.urdf"/>
+  <!-- mesh_type: "stl" (model_stl.urdf) or "obj" (model.urdf, with .mtl materials) -->
+  <arg name="mesh_type" default="stl"/>
+  <arg name="model" default="$(find iRonCub-Mk3)/iRonCub/robots/iRonCub-Mk3/model_stl.urdf" if="$(eval mesh_type == 'stl')"/>
+  <arg name="model" default="$(find iRonCub-Mk3)/iRonCub/robots/iRonCub-Mk3/model.urdf" if="$(eval mesh_type == 'obj')"/>
   <arg name="gui" default="true"/>
   <param name="robot_description" textfile="$(arg model)"/>
   <node if="$(arg gui)" name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"/>
